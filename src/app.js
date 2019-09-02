@@ -4,7 +4,6 @@
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
-const swagger = require('./api/swagger');
 
 const apiRouter = require('../routes/api');
 

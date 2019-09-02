@@ -7,10 +7,11 @@
 ### Links and Resources
 * [submission PR](https://github.com/401-advanced-javascript-leyla/lab-09/pulls)
 * [travis](https://www.travis-ci.com/search/lab-09)
+*[heroku](https://lab-09-leyla.herokuapp.com/)
 
 #### Documentation
 * [jsdoc](http://localhost:3000/api/v1/docs)
-* [jsdoc](http://localhost:5000/api-docs)
+* [swagger](http://localhost:5000/api-docs)
 
 
 ### Modules
@@ -34,4 +35,4 @@
 * `npm run test`
 
 #### UML
-Link to an image of the UML for your application and response to events
+![UML for lab-09](./lab-09-UML-whiteboard.jpg)
