@@ -2,7 +2,7 @@
 
 // require('dotenv').config();
 const mongoose = require('mongoose');
-
+const swagger = require('./src/api/swagger');
 const mongooseOptions = {
   useNewUrlParser:true,
   useCreateIndex: true,

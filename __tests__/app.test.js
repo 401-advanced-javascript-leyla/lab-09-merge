@@ -12,12 +12,12 @@ describe('Products API', () => {
       description: 'There are some fish',
       quantity: 100,
     };
-  
+
     return mockRequest.post('/api/v1/products')
       .send(testProduct)
       .then(()=>{
         return mockRequest.get('/api/v1/products');
-      })  
+      })
       .then(response => {
         expect(response.status).toEqual(200);
         expect(response.body.count).toEqual(1);
@@ -30,7 +30,7 @@ describe('Products API', () => {
       description: 'There are some sushi',
       quantity: 15,
     };
-    
+
     return mockRequest.post('/api/v1/products')
 
       .send(testProduct)
@@ -73,14 +73,14 @@ describe('Products API', () => {
       description: 'There are some flower',
       quantity: 30,
     };
-      
+
     return mockRequest.post('/api/v1/products')
-  
+
       .send(testProduct)
       .then(result=>{
         return (mockRequest.put(`/api/v1/products/${result.body._id}`)).send(updateProduct);
       })
-      
+
       .then(response=>{
         // console.log('this is in the putProduct test, response:', response);
         expect(response.status).toEqual(200);
@@ -95,12 +95,12 @@ describe('Products API', () => {
       quantity: 13,
     };
     return mockRequest.post('/api/v1/products')
-  
+
       .send(testProduct)
       .then(result=>{
         return (mockRequest.delete(`/api/v1/products/${result.body._id}`));
       })
-      
+
       .then(response=>{
         // console.log('this is in the deleteProduct test, response:', response);
         expect(response.status).toEqual(200);
@@ -115,12 +115,12 @@ describe('Products API', () => {
       description: 'There are some fish',
       quantity: 100,
     };
-  
+
     return mockRequest.post('/api/v1/products')
       .send(testProduct)
       .then(()=>{
         return mockRequest.get('/api/v1/products');
-      })  
+      })
       .then(response => {
         expect(response.status).toEqual(200);
         expect(response.body.count).toEqual(5);
@@ -135,7 +135,7 @@ describe('Products API', () => {
       description: 'There are some sushi',
       quantity: 15,
     };
-    
+
     return mockRequest.post('/api/v1/categories')
 
       .send(testCategory)
@@ -178,14 +178,14 @@ describe('Products API', () => {
       description: 'There are some flower',
       quantity: 30,
     };
-      
+
     return mockRequest.post('/api/v1/categories')
-  
+
       .send(testCategory)
       .then(result=>{
         return (mockRequest.put(`/api/v1/categories/${result.body._id}`)).send(updateCategory);
       })
-      
+
       .then(response=>{
         // console.log('this is in the putProduct test, response:', response);
         expect(response.status).toEqual(200);
@@ -200,12 +200,12 @@ describe('Products API', () => {
       quantity: 13,
     };
     return mockRequest.post('/api/v1/categories')
-  
+
       .send(testCategory)
       .then(result=>{
         return (mockRequest.delete(`/api/v1/categories/${result.body._id}`));
       })
-      
+
       .then(response=>{
         // console.log('this is in the deleteCategory test, response:', response);
         expect(response.status).toEqual(200);
